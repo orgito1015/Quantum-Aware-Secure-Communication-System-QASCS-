@@ -17,6 +17,6 @@ def make_client_context() -> ssl.SSLContext:
     ctx = ssl.SSLContext(ssl.PROTOCOL_TLS_CLIENT)
     ctx.minimum_version = ssl.TLSVersion.TLSv1_2
     ctx.load_verify_locations(cafile=str(CA_CERT))
-    ctx.check_hostname = False
+    ctx.check_hostname = True
     ctx.verify_mode = ssl.CERT_REQUIRED
     return ctx

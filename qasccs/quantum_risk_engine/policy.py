@@ -1,5 +1,5 @@
 from __future__ import annotations
-from datetime import datetime
+from datetime import datetime, UTC
 from .models import RiskRequest, RiskResponse
 
 # Tunable scenario model (for experiments; replace with rigorous estimates if needed).
@@ -19,7 +19,7 @@ def _is_pqc_or_hybrid(alg: str) -> bool:
     return alg.startswith("KYBER") or alg.startswith("DILITHIUM") or alg.startswith("HYBRID")
 
 def evaluate_risk(req: RiskRequest) -> RiskResponse:
-    now_year = datetime.utcnow().year
+    now_year = datetime.now(UTC).year
     shor_year = SCENARIO_SHOR_YEAR[req.scenario]
     horizon_year = now_year + req.data_lifetime_years
 
