@@ -18,6 +18,7 @@ This repo is designed to be:
 python -m venv .venv
 source .venv/bin/activate  # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
+pip install -e .  # Install the qasccs package in editable mode
 ```
 
 ### 2) Generate a self‑signed cert (dev only)
@@ -68,6 +69,8 @@ See: `docs/pqc-integration.md`
 
 ## Run tests
 ```bash
+# Make sure the package is installed first
+pip install -e .
 pytest -q
 ```
 
