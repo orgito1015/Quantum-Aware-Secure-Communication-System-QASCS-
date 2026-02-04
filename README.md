@@ -15,12 +15,16 @@ This repo is designed to be:
 
 ## Quick start (Classical TLS demo)
 
-### 1) Create a venv + install deps
+### 1) Create a venv + install package
 ```bash
 python -m venv .venv
 source .venv/bin/activate  # Windows: .venv\Scripts\activate
-pip install -r requirements.txt
-pip install -e .  # Install the qasccs package in editable mode
+pip install -e .  # Install the qasccs package in editable mode with dependencies
+```
+
+Or use the Makefile shortcut:
+```bash
+make install  # Installs package with dev dependencies (pytest)
 ```
 
 ### 2) Generate a self‑signed cert (dev only)
@@ -71,8 +75,11 @@ See: `docs/pqc-integration.md`
 
 ## Run tests
 ```bash
-# Make sure the package is installed first
-pip install -e .
+# Install package with dev dependencies first (includes pytest)
+pip install -e ".[dev]"
+# or: make install
+
+# Run tests
 pytest -q
 ```
 
