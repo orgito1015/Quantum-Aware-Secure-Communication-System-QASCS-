@@ -48,7 +48,7 @@ def evaluate_risk(req: RiskRequest) -> RiskResponse:
     elif _is_grover_relevant(req.algorithm):
         safe_until = horizon_year
         if req.algorithm == "AES-128":
-            risk = "MEDIUM" if bump >= 0 else "LOW"
+            risk = "MEDIUM" if bump >= 1 else "LOW"
             mode = "hybrid" if bump >= 1 else "classical"
             rationale.append("AES-128 modeled as ~64-bit vs Grover; avoid for high/critical long-term confidentiality.")
         else:

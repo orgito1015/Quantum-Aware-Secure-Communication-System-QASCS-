@@ -65,8 +65,9 @@ def test_aes128_low_classification():
         scenario="moderate"
     )
     resp = evaluate_risk(req)
-    # For AES-128 with low classification (bump=0), condition 'bump >= 0' is True, so MEDIUM risk
-    assert resp.risk == "MEDIUM"
+    # For AES-128 with low classification (bump=0), risk should be LOW and mode classical
+    assert resp.risk == "LOW"
+    assert resp.recommended_mode == "classical"
 
 
 def test_aes128_high_classification():
