@@ -1,3 +1,5 @@
+![Quantum-Aware Secure Communication System](photo.jpg)
+
 # QASCS — Quantum‑Aware Secure Communication System
 
 A **single, focused project** that combines:
