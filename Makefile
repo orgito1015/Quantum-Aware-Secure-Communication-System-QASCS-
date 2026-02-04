@@ -7,8 +7,8 @@ install:
 # First-time setup: install deps + package
 setup: install
 
-# Alias for setup
-dev: setup
+# Alias for setup (same as setup)
+dev: install
 
 certs:
 	python -m qasccs.tools.gen_certs --out qasccs/secure_channel/certs
@@ -27,5 +27,5 @@ test:
 # Clean build artifacts
 clean:
 	rm -rf build/ dist/ *.egg-info
-	find . -type d -name __pycache__ -exec rm -rf {} +
+	find . -type d -name __pycache__ -exec rm -rf {} + 2>/dev/null || true
 	find . -type f -name "*.pyc" -delete
