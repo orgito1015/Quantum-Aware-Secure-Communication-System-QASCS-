@@ -1,4 +1,4 @@
-![QASCS](photo.jpg)
+![Quantum-Aware Secure Communication System](photo.jpg)
 
 # QASCS — Quantum‑Aware Secure Communication System
 
