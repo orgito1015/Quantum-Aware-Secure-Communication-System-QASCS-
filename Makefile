@@ -27,5 +27,5 @@ test:
 # Clean build artifacts
 clean:
 	rm -rf build/ dist/ *.egg-info
-	find . -type d -name __pycache__ -exec rm -rf {} + 2>/dev/null || true
+	find . -type d -name __pycache__ -prune -exec rm -rf {} +
 	find . -type f -name "*.pyc" -delete
