@@ -85,5 +85,21 @@ pytest -q
 
 ---
 
+## 📋 Project Management
+
+This repository uses **GitHub Projects** for project management and issue tracking. 
+
+### For Contributors
+- Check the [Project Board](https://github.com/orgito1015/Quantum-Aware-Secure-Communication-System-QASCS-/projects) to see current priorities
+- Read the [Contributing Guide](.github/CONTRIBUTING.md) before submitting PRs
+- Use [Issue Templates](.github/ISSUE_TEMPLATE/) when reporting bugs or requesting features
+- Review the [Project Roadmap](.github/ROADMAP.md) to see planned features
+
+### Getting Started with GitHub Projects
+- See [Project Setup Guide](.github/PROJECT_SETUP.md) for detailed instructions on creating and managing the project board
+- Review [Sample Issues](.github/SAMPLE_ISSUES.md) for examples of well-structured issues
+
+---
+
 ## Disclaimer
 This project is for **learning/research**. The default certificate generation is **dev‑only** and not production‑ready.
